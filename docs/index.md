@@ -1,7 +1,4 @@
----
-title: "Index"
-permalink: index
----
+
 
 Stuff goes here.
 
