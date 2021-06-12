@@ -12,6 +12,8 @@ source "https://rubygems.org"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
 gem "jekyll-theme-time-machine"
+gem "just-the-docs"
+#git:"https://github.com/pages-themes/time-machine"
 #gem "jekyll-help-center-theme"
 #gem "jekyll-theme-quickstart", git: "https://github.com/MichaelCurrin/jekyll-theme-quickstart"
 #gem "documentation-theme-jekyll", git: "https://github.com/tomjoht/documentation-theme-jekyll"
