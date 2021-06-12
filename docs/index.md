@@ -1,7 +1,9 @@
---
-layout: page
-title: "PAGE TITLE"
+---
+layout: default
+title: "Index"
 permalink: index
---
+---
 
 Stuff goes here.
+
+MOAR STUFF
