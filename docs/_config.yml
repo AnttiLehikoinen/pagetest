@@ -36,8 +36,7 @@ remote_theme: pmarsceill/just-the-docs
 #theme: jekyll-help-center-theme
 #remote_theme: gustavoquinalha/jekyll-help-center-theme 
 #remote_theme: documentation-theme-jekyll
-plugins:
-  - jekyll-feed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
