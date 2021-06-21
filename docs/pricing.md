@@ -7,28 +7,11 @@ nav_order: 3
 
 # Pricing
 
-<div class="row">
-	<div class="column">
-		<div class="w3-card w3-blue">
-			<h2>Academic</h2>
-			dasdasdasdas
-		</div>
-	</div>
-
-	<div class="column">
-		<div class="w3-card w3-blue">
-			<h2>Industrial</h2>
-		</div>
-	</div>
-
-	<div class="column">
-	  <div class="w3-card w3-blue">
-		<h2>Enterprise</h2>
-	  </div>
-	</div>
-</div>
+ &nbsp; | Academic / hobby | Industrial
+---| --- | ---
+Restrictions | For non-commercial use | -
+Source code available | No | Yes
+Support | Perhaps | Yes
+Pricing | **Free** | **2000 EUR / year / user**
 
 
-| Academic   | Industrial          | Enterprise |
-|:-------------|:------------------|:------|
-| Free         | Eleventy billion | Contact  |
