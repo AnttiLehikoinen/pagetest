@@ -1,0 +1,37 @@
+EMDtool circuit analysis is largely based on the mesh current / loop current method, as it plays so well along with finite element analysis.
+
+The Paint nightmare below is my illustration of the three cases. All pics:
+
+* Thick black lines: three motor phases, connected in star
+    * From the circuit analysis point of view, the finite-element part really appears as voltage sources and resistances in series with them (resistances not illustrated here)
+    * For stranded windings, the voltage term is computed from the time-derivative of flux linkage, while the resistance part includes the entire phase resistance (end-winding and active-part combined)
+    * For solid-conductor windings, the "voltage" term is an extra unknown/degree-of-freedom to be solved, and contains both the induced voltage and resistive voltage drop in the active part of the machine. Only the end-winding resistances would appear in the circuit diagram here.
+* Blue: supply voltages
+* Thin black lines: inverter-to-motor connections
+* Red: virtual loop currents
+* Resistances are ignored for simplicity. Currently, EMDtool easily supports only "FE resistances", so motor resistances and none on the lines or in the source. 
+Line resistances can be jury-rigged assuming the circuit is simple as in the pics, if needed.
+
+The first pic demonstrates a normal three-phase connection. If we assume the voltage source is an inverter, then the star point of the source would correspond to the "ground bus" of 
+the inverter (is there a better term?), and each of the blue voltage sources would be one half bridge. As everything is in star, only two loops are formed.
+
+To illustrate how the circuit equations are formed, we have to consider two things:
+
+1. The motor phase currents (IA, IB, IC) are now not independent, but depend on the loop currents I1 and I2. We can write
+
+[IA; IB; IC] = [1 0;0 1; -1 -1] * [I1; I2]
+
+Let's call the 3x2 matrix above L. This is the matrix that is returned by the independent current matrix method of PolyphaseWindingSpec.
+
+2. On the other hand, we also know that the sum of voltages in both of the loops must equal zero. Let V denote the "finite-element voltages" (black sources) and U denote the supply sources (blue circles). Then, we have
+
+VA - VC = -UC + UA
+
+VB - VC = -UC + UB
+
+Or, in matrix form we can write this as
+
+L^T * [VA; VB; VC] = L^T [UA; UB; UC]
+
+In other words, the same matrix L that relates the loop currents to the phase currents, also (as a transpose) relates the FE-voltages to the loop voltages. 
+Technically, the same matrix does not have to appear on the supply-side; instead the |PolyphaseWindingSpec.line_to_line_voltage_matrix| is used for that.

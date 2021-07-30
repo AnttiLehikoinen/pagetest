@@ -7,6 +7,8 @@ nav_order: 3
 
 # Pricing
 
+Beta-prizing, quaranteed only for the N first clients.
+
  &nbsp; | Academic / hobby | Industrial
 ---| --- | ---
 Restrictions | For non-commercial use | -
