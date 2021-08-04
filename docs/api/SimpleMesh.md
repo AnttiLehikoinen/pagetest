@@ -48,7 +48,7 @@ plot_edges(this, inds, [plot_args](plot_args.html))
 
 plot_nodes(this, node_indices, varargin)
 
-Plot the nodes 'node_indices' with _varargin_ passed to
+Plot the nodes 'node_indices' with *varargin*  passed to
 plot.
 
 ### * SimpleMesh/point2element is a function.

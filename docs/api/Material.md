@@ -8,9 +8,9 @@ Material Basic isotropic material class.
 
 Materials are normally instantiated with the static methods
 
-* |Material.create|
+* `Material.create`
 
-* |Material.from_specs|
+* `Material.from_specs`
 ## PROPERTIES
 * Material/BH_extrapolation_method is a property.
 
@@ -19,11 +19,11 @@ Materials are normally instantiated with the static methods
 * iron_loss_computation_method Iron loss computation method.
 
 This property allows an option to toggle the iron loss
-computation method. Indeed, the |loss_density| method of the
+computation method. Indeed, the `loss_density`  method of the
 [Material](Material.html) class calls the method with its name equal to this
 property.
 
-However, subclasses may have a different |loss_density| method.
+However, subclasses may have a different `loss_density`  method.
 Help for Material/iron_loss_computation_method is inherited from superclass MATERIALBASE
 
 * stacking_factors - list of stacking factors per each element
@@ -55,7 +55,7 @@ Create an empty Material object.
 
 Compute reluctivities and extrapolate BH data.
 
-Reluctivity data as a function of B^2 is saved to |this.data|.
+Reluctivity data as a function of B^2 is saved to `this.data` .
 
 ### * detach Clear elements, domains, etc.
 
@@ -63,7 +63,7 @@ Reluctivity data as a function of B^2 is saved to |this.data|.
 
 [nu, dnu] = differential_reluctivity(this, Bvector, true)
 
-Return reluctivity and its derivative w.r.t. |B|^2 computed with the
+Return reluctivity and its derivative w.r.t. `B` ^2 computed with the
 harmonic approximation
 
 [H, dHdB] = differential_reluctivity(this, Bvector)
@@ -186,7 +186,7 @@ period of the flux density waveforms.
 
 WARNING: many concentrated winding configurations result in sub-harmonics
 in the rotor field. In this case, multiple electrical periods should be
-analysed, and the |use_entire_solution| keyword argument set to |true|
+analysed, and the `use_entire_solution`  keyword argument set to `true`
 when calling MaterialBase.losses.
 
 ### * iron_loss_density_time_domain_Steinmetz Iron loss density from modified Steinmetz
@@ -196,11 +196,11 @@ model.
 iron_loss_density_time_domain_Steinmetz(this, Bdata), where
 
 * Bdata : flux density data structure returned from
-|MaterialBase.get_B_data|.
+`MaterialBase.get_B_data` .
 
 The loss components are computed as follows:
 
-p_hysteresis = hysteresis loss density = ch * (|Bx^a * dBx/dt^b| + |By^a * dBy/dt^b|
+p_hysteresis = hysteresis loss density = ch ** (|Bx^a **  dBx/dt^b| + `By^a * dBy/dt^b`
 
 where a=b=1 by default, if not given in
 this.material_properties.steinmetz_exponents = 1x2 vector
@@ -218,7 +218,7 @@ W/kg.
 
 [p_hysteresis, p_eddy, p_excess] = loss_density(this, Bdata), where
 
-* Bdata : flux density waveform data returned by |get_B_data|.
+* Bdata : flux density waveform data returned by `get_B_data` .
 
 Return values:
 

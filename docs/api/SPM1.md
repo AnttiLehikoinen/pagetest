@@ -13,7 +13,7 @@ Class methods are listed below. Inherited methods are not included.
 this = SPM1(dim)
 
 Initializes the geometry with the dimensions specified in
-the struct _dim_.
+the struct *dim* .
 
 ### * create_geometry Initialize geometry.
 

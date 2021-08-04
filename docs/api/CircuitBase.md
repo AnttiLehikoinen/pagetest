@@ -17,7 +17,7 @@ include
 
 * [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
 
-Use the |add_conductor| method to add conductors to this.
+Use the `add_conductor`  method to add conductors to this.
 ## PROPERTIES
 * CircuitBase/conductors is a property.
 
@@ -46,14 +46,14 @@ include
 
 * [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
 
-Use the |add_conductor| method to add conductors to this.
+Use the `add_conductor`  method to add conductors to this.
 
 ### * add_conductor Add conductor to circuit.
 
 this = add_conductor(this, conductor, (type))
 
-Adds the [Domain](Domain.html) or [Conductor](Conductor.html) object _conductor_ to this
-Circuit. If _conductor_ is a Domain, a new Conductor object
+Adds the [Domain](Domain.html) or [Conductor](Conductor.html) object *conductor*  to this
+Circuit. If *conductor*  is a Domain, a new Conductor object
 is created.
 
 Type is an optional arguments, either def.solid for a solid
@@ -101,13 +101,13 @@ Nui = get_ndof(this, problem, type, pars), where
 
 ### * half_of_turn_length Return half of turn length.
 
-Usually equal to |this.effective_length|, unless an
+Usually equal to `this.effective_length` , unless an
 end-winding is modelled.
 
 ### * handle_latest_copies Object array method.
 
 When called on an array of Circuit objects, this method calls
-the |handle_latest_copies| method on each individual Circuit.
+the `handle_latest_copies`  method on each individual Circuit.
 
 ### * handle_latest_copies1 Method for handling geometry
 replication.
@@ -119,7 +119,7 @@ as new Conductors.
 
 This method works for a single Circuit object only, i.e. it
 cannot be called on an object array. See
-|this.handle_latest_copies|
+`this.handle_latest_copies`
 
 ### * indices_to_average_losses_over Indices for loss averaging.
 

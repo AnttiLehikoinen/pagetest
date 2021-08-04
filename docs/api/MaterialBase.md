@@ -19,11 +19,11 @@ Not really used right now, see [Material](Material.html).
 * iron_loss_computation_method Iron loss computation method.
 
 This property allows an option to toggle the iron loss
-computation method. Indeed, the |loss_density| method of the
+computation method. Indeed, the `loss_density`  method of the
 [Material](Material.html) class calls the method with its name equal to this
 property.
 
-However, subclasses may have a different |loss_density| method.
+However, subclasses may have a different `loss_density`  method.
 
 * is_symmetric - Is the differential reluctivity symmetric?
 
@@ -61,7 +61,7 @@ point)
 
 * timestamps : time-step timestamps in seconds
 
-* volume_multiplier : model.dimensions.leff * model.symmetrySectors
+** volume_multiplier : model.dimensions.leff **  model.symmetrySectors
 
 * DETF : absolute value of mesh mapping matrix determinant at quad point
 
@@ -75,7 +75,7 @@ point)
 
 [p_hysteresis, p_eddy, p_excess] = loss_density(this, Bdata), where
 
-* Bdata : flux density waveform data returned by |get_B_data|.
+* Bdata : flux density waveform data returned by `get_B_data` .
 
 Return values:
 
@@ -124,7 +124,7 @@ the W/kg used in previous versions.
 
 The **losses** are computed by first computing the flux density waveforms
 with MaterialBase.get_B_data, and then passing the results to
-the |.loss_density| method of each  [Material](Material.html) in the solution, to get the
+the `.loss_density`  method of each  [Material](Material.html) in the solution, to get the
 elementwise loss densities. The **losses** are then summed and  the
 other interesting outputs computed.
 
@@ -141,7 +141,7 @@ elements (motor.rotel) / 'all' remove from all elements.
 Default: false: only last full electrical period is used.
 
 * method : This value is temporarily set as the
-|iron_loss_computation_method| property of each [Material](Material.html). For the plain
+`iron_loss_computation_method`  property of each [Material](Material.html). For the plain
 [Material](Material.html) class, the options are
 "iron_loss_density_time_domain_Steinmetz" and
 "iron_loss_density_frequency_domain_Bertotti". Subclasses may ignore

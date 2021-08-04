@@ -48,7 +48,7 @@ Uout = U(this, circuit, problem, type, t, k, inds, X), where
 * inds : indices to voltage-current variables corresponding
 to the parent Circuit
 
-* X : raw solution vector of the _previous_ time-step.
+* X : raw solution vector of the *previous*  time-step.
 
 ### * VoltageSource Voltage source class for MagneticsProblem.
 

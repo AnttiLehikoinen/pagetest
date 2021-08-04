@@ -27,15 +27,15 @@ specifying
 within the so-called reference element (unit-triangle ((0,0),
 (1,0), (0,1)) for triangular elements) associated with the mesh
 element types. The actual evaluation then takes place on the GLOBAL
-coordinates, i.e. a point within each of the listed _elements_
+coordinates, i.e. a point within each of the listed *elements*
 corresponding to the given local coordinate. For instance, the
 local point [0.25;0.25] is mapped (more or less) to the global element
 center.
 
 * Index of shape function. As nodal shape functions are each
 associated with a mesh node, there are 3 shape functions that are
-non-zero over a first-order element. Example: for the element _e_,
-the shape function _k_ is associated the node mesh.t(k, e).
+non-zero over a first-order element. Example: for the element *e* ,
+the shape function *k*  is associated the node mesh.t(k, e).
 ## PROPERTIES
 * op - operator
 
@@ -59,9 +59,9 @@ vals = eval(this, k, x_local, mesh, elements)
 
 Evaluates (this.op x N_k), where N_k is the k:th node of
 the elementType of the given mesh. The expression is
-evaluated at the _global_ coordinates
-corresponding to the given _local_ coordinates, on the
-specified _elements_ of the given _mesh_.
+evaluated at the *global*  coordinates
+corresponding to the given *local*  coordinates, on the
+specified *elements*  of the given *mesh* .
 
 Input arguments:
 

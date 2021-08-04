@@ -6,7 +6,7 @@ grand_parent : Documentation
 ## Summary
 Domain Domain class.
 
-In |EMDtool|, a 'Domain' represents all aspects of some interesting part of an
+In `EMDtool` , a 'Domain' represents all aspects of some interesting part of an
 electric machine or electromagnetic problem. Thus, a domain has
 
 * A [Material](Material.html) that it consists of
@@ -20,7 +20,7 @@ this = Domain(domain_name, material_object)
 this = Domain(domain_name, material_object, surface_1, surface_2,
 ...)
 
-Surfaces can be added with |this.add_surface|
+Surfaces can be added with `this.add_surface`
 ## PROPERTIES
 * copied_from - a Domain that his has been replicated from, if any
 
@@ -42,7 +42,7 @@ Surfaces can be added with |this.add_surface|
 Class methods are listed below. Inherited methods are not included.
 ### * Domain **Domain** class.
 
-In |EMDtool|, a 'Domain' represents all aspects of some interesting part of an
+In `EMDtool` , a 'Domain' represents all aspects of some interesting part of an
 electric machine or electromagnetic problem. Thus, a domain has
 
 * A [Material](Material.html) that it consists of
@@ -56,7 +56,7 @@ this = Domain(domain_name, material_object)
 this = Domain(domain_name, material_object, surface_1, surface_2,
 ...)
 
-Surfaces can be added with |this.add_surface|
+Surfaces can be added with `this.add_surface`
 
 ### * add_surface Add one or more Surfaces to this.
 
@@ -84,17 +84,17 @@ can specify X as a matrix with size equal to Y. To avoid
 unexpected output when X is a matrix, specify X so that the
 columns repeat.
 
-AREA( ___ ,BASEVALUE) specifies the base value for the **area** fill.
+AREA( ** _ ,BASEVALUE) specifies the base value for the **area** fill.
 The default BASEVALUE is 0. Specify the base value as a numeric
 value.
 
-AREA( ___ ,Name,Value) modifies the appearance of the **area** chart
+AREA( ** _ ,Name,Value) modifies the appearance of the **area** chart
 using one or more name-value pair arguments.
 
-AREA(AX, ___ ) plots into the axes specified by AX instead of the
+AREA(AX, ** _ ) plots into the axes specified by AX instead of the
 current axes.
 
-H = AREA( ___ ) returns one or more Area objects. AREA creates one
+H = AREA( ** _ ) returns one or more Area objects. AREA creates one
 object for vector input arguments and one object per column for
 matrix input arguments.
 

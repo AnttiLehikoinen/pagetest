@@ -11,11 +11,11 @@ A valid HysteresisModel has to be set to this.hysteresis_model.
 WARNING: HystereticMaterial objects are stateful, associated with the
 latest [MagneticsSolution](MagneticsSolution.html). Thus, calling
 
-|solution_1 = problem.solve_xx|
-|solution_2 = problem_solve_xx|
-|losses = MaterialBase.losses(solution_1)|
+`solution_1 = problem.solve_xx`
+`solution_2 = problem_solve_xx`
+`losses = MaterialBase.losses(solution_1)`
 
-will result in *incorrect* results or a crash.
+will result in **incorrect**  results or a crash.
 ## PROPERTIES
 * Bcand - candidate B values, current Newton iteration
 
@@ -52,11 +52,11 @@ A valid HysteresisModel has to be set to this.hysteresis_model.
 WARNING: **HystereticMaterial** objects are stateful, associated with the
 latest [MagneticsSolution](MagneticsSolution.html). Thus, calling
 
-|solution_1 = problem.solve_xx|
-|solution_2 = problem_solve_xx|
-|losses = MaterialBase.losses(solution_1)|
+`solution_1 = problem.solve_xx`
+`solution_2 = problem_solve_xx`
+`losses = MaterialBase.losses(solution_1)`
 
-will result in *incorrect* results or a crash.
+will result in **incorrect**  results or a crash.
 
 ### * basic copy stuff
 
@@ -75,7 +75,7 @@ point of the BH loop.
 
 [nu, dnu] = differential_reluctivity(this, Bvector, true)
 
-Return reluctivity and its derivative w.r.t. |B|^2 computed with the
+Return reluctivity and its derivative w.r.t. `B` ^2 computed with the
 harmonic approximation
 
 [H, dHdB] = differential_reluctivity(this, Bvector)
@@ -88,7 +88,7 @@ Help for HystereticMaterial/differential_reluctivity is inherited from superclas
 
 Dynamic hysteresis is modelled as
 
-H_dynamic = this.electrical_conductivity * this.sheet_thickness^12 *
+H_dynamic = this.electrical_conductivity ** this.sheet_thickness^12 **
 1/12 * dB/dt
 
 Call syntax:
@@ -126,7 +126,7 @@ Hirr = H - Han(B) - Heddy, where
 BH curve (this.B, this.H) and the current value of B
 
 * Heddy : dynamic hysteresis field strength, computed with
-|this.evaluate_dynamic_H|.
+`this.evaluate_dynamic_H` .
 
 See MaterialBase.loss_density for input/output syntax.
 

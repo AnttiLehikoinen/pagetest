@@ -67,7 +67,7 @@ Sets the following properties of this:
 * n_cw
 * n_ccw
 
-based on the information in _Surfaces_ typically returned
+based on the information in *Surfaces*  typically returned
 by [gw](gw.html) .
 
 ### * sector_angle Angle of symmetry sector.

@@ -24,11 +24,11 @@ directions, if any, by sector_shift.
 
 mesh_elementary_geometry(this)
 
-Meshes the _elementary_ geometry, e.g. the raw geometry before possible
+Meshes the *elementary*  geometry, e.g. the raw geometry before possible
 replication.
 
-Note that the methods |this.shift_elementary_nodes|,
-|this.copy_domain|, and |this.parse_nodes| have to be implemented.
+Note that the methods `this.shift_elementary_nodes` ,
+`this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 Help for AxialGeometry/mesh_elementary_geometry is inherited from superclass GEOBASE
 
 ### * this = parse_nodes@GeoBase(this, Surfaces);

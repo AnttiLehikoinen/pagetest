@@ -8,14 +8,14 @@ GeoBase Base class for geometries.
 
 Basic usage:
 
-* Add some <Domain.html Domains> with |this.add_domain|
+* Add some <Domain.html Domains> with `this.add_domain`
 
-* Add the <Material.html required Materials> with |this.add_material|
+* Add the <Material.html required Materials> with `this.add_material`
 
 * Optionally, add some <CircuitBase.html Circuits> with
-|this.add_circuit|
+`this.add_circuit`
 
-* Call |this.mesh_geometry| to mesh the elementary geometry and
+* Call `this.mesh_geometry`  to mesh the elementary geometry and
 replicate accordingly.
 
 Note that his is an abstract base class and cannot be instantiated.
@@ -132,11 +132,11 @@ experimental ARC and LINE features (DEFAULT).
 
 fill(this, name, varargin)
 
-Fills the mesh of domain _name_, using varargin{:} as
+Fills the mesh of domain *name* , using varargin{:} as
 arguments.
 
 * See [msh_fill](msh_fill.html)
-* See this.get_domain for the use of wildcards with _name_
+* See this.get_domain for the use of wildcards with *name*
 
 fill(this, varargin)
 
@@ -147,11 +147,11 @@ arguments.
 
 get_domain(this, name)
 
-Returns the [Domain](Domain.html) with the correct _name_.
+Returns the [Domain](Domain.html) with the correct *name* .
 
 The wildcard syntax name_* can be used to find all
 replicated domains corresponding to the original domain
-with _name_.
+with *name* .
 
 ### * list_dimensions Display dimensions info on command window
 
@@ -162,19 +162,19 @@ with _name_.
 
 mesh_elementary_geometry(this)
 
-Meshes the _elementary_ geometry, e.g. the raw geometry before possible
+Meshes the *elementary*  geometry, e.g. the raw geometry before possible
 replication.
 
-Note that the methods |this.shift_elementary_nodes|,
-|this.copy_domain|, and |this.parse_nodes| have to be implemented.
+Note that the methods `this.shift_elementary_nodes` ,
+`this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 
 ### * GeoBase/mesh_elementary_geometry_3D is a function.
 mesh_elementary_geometry_3D(this, varargin)
 
 ### * mesh_geometry Mesh geometry.
 
-Equivalent to calling |this.mesh_elementary_geometry| and
-|this.replicate_elementary_mesh|
+Equivalent to calling `this.mesh_elementary_geometry`  and
+`this.replicate_elementary_mesh`
 
 ### * parse_nodes Parse special nodes.
 
@@ -195,13 +195,13 @@ Equivalent to calling msh_plot(this, varargin{:})
 
 [] = plot_geometry(this, varargin)
 
-Plots the geometry using _plot_ with _varargin_{:}
+Plots the geometry using *plot*  with *varargin* {:}
 
 ### * replicate_elementary_mesh Replicate elementary mesh.
 
 replicate_elementary_mesh(this, sector_shift, Nrep)
 
-Replicates the elementary geometry _Nrep_ times. This is performed by
+Replicates the elementary geometry *Nrep*  times. This is performed by
 
 * applying the sector_shift to this.p, using this.shift_elementary_nodes
 
@@ -233,7 +233,7 @@ this.dimensions.symmetry_period.
 
 triplot(this, name, varargin)
 
-Plots the mesh of domain _name_, using varargin{:} as
+Plots the mesh of domain *name* , using varargin{:} as
 arguments.
 
 triplot(this, varargin)

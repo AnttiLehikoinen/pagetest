@@ -74,7 +74,7 @@ this = SVPWM_Modulator(UDC, fs), where
 
 ### * U(this, t) Instantaneous voltage.
 
-Uterminal = U(this, t, varargin) returns the terminal _potentials_ measured
+Uterminal = U(this, t, varargin) returns the terminal *potentials*  measured
 against an arbitraty reference point. For instance, for the
 typical 3-phase inverter bridge, the output would be a 3x1 vector
 of the output voltages of each half-bridge, measured agains the

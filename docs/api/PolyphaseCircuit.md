@@ -13,14 +13,14 @@ Returns a new PolyphaseCircuit object with the given name
 and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
 specification.
 
-A PolyphaseCircuit is largely characterized by its |winding_spec|
+A PolyphaseCircuit is largely characterized by its `winding_spec`
 property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
 
 The PolyphaseCircuit then handles the finite-element representation
 of the winding, as well as the different supply modes. See
-|this.set_load|.
+`this.set_load` .
 ## PROPERTIES
 * PolyphaseCircuit.circuit_analysis_arguments is a property.
 
@@ -41,14 +41,14 @@ Returns a new **PolyphaseCircuit** object with the given name
 and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
 specification.
 
-A **PolyphaseCircuit** is largely characterized by its |winding_spec|
+A **PolyphaseCircuit** is largely characterized by its `winding_spec`
 property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
 
 The **PolyphaseCircuit** then handles the finite-element representation
 of the winding, as well as the different supply modes. See
-|this.set_load|.
+`this.set_load` .
 
 ### * coil_current Coil current from solution.
 
@@ -179,7 +179,7 @@ U = phase_bemf(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
-U = time-derivative of |this.terminal_flux_linkage|
+U = time-derivative of `this.terminal_flux_linkage`
 
 ### * phase_current Phase current from solution.
 
@@ -276,7 +276,7 @@ U = terminal_bemf(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
-U = time-derivative of |this.terminal_flux_linkage| return
+U = time-derivative of `this.terminal_flux_linkage`  return
 value.
 
 ### * terminal_current Terminal current from solution.

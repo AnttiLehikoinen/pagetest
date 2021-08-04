@@ -50,7 +50,7 @@ If the geometry already contains a [Curve](Curve.html) linking p1 and p2,
 it is automatically added to this. If not, a new Curve
 object is created.
 
-Curves must be added _in order_, i.e. the start Point of
+Curves must be added *in order* , i.e. the start Point of
 the current curve must equal the end Point of the
 previously added Curve.
 
@@ -69,9 +69,9 @@ add_curve(this, geo.hole, surf1, surf2, ..)
 Adds the surfaces surf1, surf2, .. as holes within this
 surface.
 
-*Note*: multiple calls to **add_curve** can be chained together
+**Note** : multiple calls to **add_curve** can be chained together
 by simply passing all arguments to the method at once.
-However, the _holes_, if any, must be supplied last and not
+However, the *holes* , if any, must be supplied last and not
 be followed by any Curves.
 
 ### * add_hole Add one or more holes to the surface.
@@ -83,7 +83,7 @@ add_hole(this, surface_1, ...)
 Calculate the **area** of this surface (polygon). See
 this.points().
 
-*NOTE*: after meshing the geometry, the **area** of the meshed
+**NOTE** : after meshing the geometry, the **area** of the meshed
 surface may not exactly equal the number returned by
 area(this), especially if the surface contains [Arc](Arc.html)
 boundaries.
@@ -128,10 +128,10 @@ where Point_start and Point_end specify some boundary Line segment. The
 method modifies the boundary of this surface accordingly, and
 additionally returns the new boundary curves.
 
-*NOTE* The method works on _counterclockwise_ oriented surfaces, so the
+**NOTE**  The method works on *counterclockwise*  oriented surfaces, so the
 start and end points must be selected accordingly.
 
-*NOTE* This method must be called only after _all_ boundary-sharing holes
+**NOTE**  This method must be called only after *all*  boundary-sharing holes
 have been defined; the method cannot see the future.
 
 ### * reset_curves Remove all lines.
