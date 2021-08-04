@@ -78,6 +78,11 @@ has_toc : false
 
 * *class* : [Materials/Material](Material.html)  **Material** Basic isotropic material class.
 * *class* : [MaterialBase](MaterialBase.html)  **MaterialBase** Base class for materials.
+* *class* : [/Hysteretic materials, WIP/HysteresisModel](HysteresisModel.html)  **HysteresisModel** Base class for hysteresis models.
+* *class* : [/Hysteretic materials, WIP/HystereticMaterial](HystereticMaterial.html)  **HystereticMaterial** Material class for hysteretic materials.
+* *class* : [/Hysteretic materials, WIP/HysteronModel](HysteronModel.html)  **HysteronModel** Base class for vector hysteron models
+* *class* : [/Hysteretic materials, WIP/PlayModel](PlayModel.html)  **PlayModel** Play hysteron model.
+* *class* : [/Hysteretic materials, WIP/StopModel](StopModel.html)  **StopModel** Hysteresis model based on Stop hysteron.
 * *class* : [MaterialSet](MaterialSet.html)  **MaterialSet** Container class.
 * *class* : [//SteelLibrary](SteelLibrary.html)  **SteelLibrary** Static class for creating electrical steel Material
 * *class* : [Arnon7](Arnon7.html)  **Arnon7** **Arnon7** Material object.

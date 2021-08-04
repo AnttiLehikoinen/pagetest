@@ -8,4 +8,4 @@ has_children: true
 
 # Documentation
 
-Information goes here
+This is the main page of Documentation. Please use the navigation bar to actually access something useful.

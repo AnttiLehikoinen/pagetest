@@ -3,7 +3,16 @@ layout: default
 title: Getting started
 nav_order: 2
 parent: Documentation
+math: mathjax2
 ---
+Coming soon
+{: .label .label-yellow }
+
+**Just some syntax testing here for now**
+
+Equation here:
+
+$$a = b$$
 
 
 # Getting started

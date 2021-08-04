@@ -23,6 +23,8 @@ finalize_after_simulation(this, solution)
 
 ### * get_matrices Return circuit matrices for a problem.
 
+### * get_matrices Return circuit matrices for a problem.
+
 ### * CircuitSet/init_for_simulation is a function.
 this = init_for_simulation(this, solution)
 

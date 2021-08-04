@@ -57,7 +57,7 @@ dispf(this, msg)
 ### * init_current_ripple Initialize current ripple.
 
 init_current_ripple(this, id, iq, rpm) Sets current ripple if not
-*already* set.
+_already_ set.
 
 ### * init_detailed Initialize for detailed FEA computation.
 

@@ -84,17 +84,17 @@ can specify X as a matrix with size equal to Y. To avoid
 unexpected output when X is a matrix, specify X so that the
 columns repeat.
 
-AREA( *_* ,BASEVALUE) specifies the base value for the **area** fill.
+AREA( ___ ,BASEVALUE) specifies the base value for the **area** fill.
 The default BASEVALUE is 0. Specify the base value as a numeric
 value.
 
-AREA( *_* ,Name,Value) modifies the appearance of the **area** chart
+AREA( ___ ,Name,Value) modifies the appearance of the **area** chart
 using one or more name-value pair arguments.
 
-AREA(AX, *_* ) plots into the axes specified by AX instead of the
+AREA(AX, ___ ) plots into the axes specified by AX instead of the
 current axes.
 
-H = AREA( *_* ) returns one or more Area objects. AREA creates one
+H = AREA( ___ ) returns one or more Area objects. AREA creates one
 object for vector input arguments and one object per column for
 matrix input arguments.
 

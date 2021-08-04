@@ -14,7 +14,7 @@ operations
 
 * pnew = p1 + p2
 * pnew = p1 - p2
-** pnew = p1 ** scalar
+* pnew = p1 * scalar
 * pnew = p1 / scalar
 * r = norm(p1) = p1.norm()
 * theta = angle(p1) = p1.angle()
@@ -25,7 +25,7 @@ geometries for radial-flux motors:
 * pnew = p1.mirror(theta)
 * pnew = p1.normalize(radius)
 * p1.translate( [x,y] )
-* *inplace* variants of the above, for e.g. modifying existing
+* _inplace_ variants of the above, for e.g. modifying existing
 [Surface](Surface.html) objects.
 ## PROPERTIES
 * curves - Array of [Curve](Curve.html) objects that this point belongs to
@@ -72,7 +72,7 @@ See Point.plus.
 
 p2 = mirror(this, theta)
 
-Returns a new Point, mirrored around the *center* of a
+Returns a new Point, mirrored around the _center_ of a
 circle segment of theta radians. For instance, if
 
 angle(P) = 30 deg,

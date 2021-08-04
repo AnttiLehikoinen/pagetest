@@ -70,5 +70,5 @@ res = residual vector
 
 ### * init_assembly Initialize MagneticsJacobian.
 
-this = init_assembly(this, msh, fun_test, fun_shape, symmetric )
+this = init_assembly(this, model, fun_test, fun_shape, symmetric )
 

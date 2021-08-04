@@ -62,7 +62,7 @@ Help for FieldWindingSpec/set_layout_matrix is inherited from superclass POLYPHA
 
 a = winding_angle(this)
 
-Compute the stator *winding angle* i.e. rotation angle for the
+Compute the stator _winding angle_ i.e. rotation angle for the
 direct-quadrature space vector transformation (*without* considering the
 rotor bias angle) so that injecting d-axis current into the stator winding
 generates a cosinusoidal airgap flux

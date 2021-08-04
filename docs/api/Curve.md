@@ -14,7 +14,7 @@ CURVE Abstract base class for representing line segments and circle arcs
 
 * pend - end  [Point](Point.html) of curve
 
-* periodic_with - Another curve that *this* is periodic with.
+* periodic_with - Another curve that _this_ is periodic with.
 
 * pstart - start [Point](Point.html) of curve
 

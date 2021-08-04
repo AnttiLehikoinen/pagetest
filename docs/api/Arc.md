@@ -49,7 +49,7 @@ this = from_segment_points(Pstart, Pmid, Pend) creates a new Arc between Pstart
 and Pend, so that it goes over Pmid. A new Point is created for the Arc
 center.
 
-**IMPORTANT NOTE:** The function returns a single Arc, between Pstart and
+*IMPORTANT NOTE:* The function returns a single Arc, between Pstart and
 Pend. Thus, the Point Pmid does not "belong" to the resulting Arc, and
 therefore must not be used as start- or end-Point in any other Curve.
 

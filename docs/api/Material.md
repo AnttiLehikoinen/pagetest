@@ -12,23 +12,19 @@ Materials are normally instantiated with the static methods
 
 * |Material.from_specs|
 ## PROPERTIES
-* B - given B-curve
-
 * Material/BH_extrapolation_method is a property.
-
-* H - given H-curve
 
 * Material/data is a property.
 
-* domains - list of **domains** that are made of this material
+* iron_loss_computation_method Iron loss computation method.
 
-* elements - indices to finite elements
+This property allows an option to toggle the iron loss
+computation method. Indeed, the |loss_density| method of the
+[Material](Material.html) class calls the method with its name equal to this
+property.
 
-* is_symmetric - Is the differential reluctivity symmetric?
-
-* material_properties - struct of material properties
-
-* plot_args - plotting instructions for this
+However, subclasses may have a different |loss_density| method.
+Help for Material/iron_loss_computation_method is inherited from superclass MATERIALBASE
 
 * stacking_factors - list of stacking factors per each element
 
@@ -182,18 +178,53 @@ nonlinear problems.
 
 NOTE: Original BH data is not modified.
 
+### * iron_loss_density_frequency_domain_Bertotti Iron loss density computed
+with the frequency-domain Bertotti model.
+
+WARNING: make sure the that the solution used contains a full fundamental
+period of the flux density waveforms.
+
+WARNING: many concentrated winding configurations result in sub-harmonics
+in the rotor field. In this case, multiple electrical periods should be
+analysed, and the |use_entire_solution| keyword argument set to |true|
+when calling MaterialBase.losses.
+
 ### * iron_loss_density_time_domain_Steinmetz Iron loss density from modified Steinmetz
-model, in W/kg.
+model.
 
-[physt, peddy] = ...
-iron_loss_density_time_domain_Steinmetz(this, timestamps, Bx, By)
+[p_hysteresis, p_eddy, p_excess] =
+iron_loss_density_time_domain_Steinmetz(this, Bdata), where
 
-physt = hysteresis loss density = ch ** (|Bx^a ** dBx/dt^b| + |By^a * dBy/dt^b|
+* Bdata : flux density data structure returned from
+|MaterialBase.get_B_data|.
+
+The loss components are computed as follows:
+
+p_hysteresis = hysteresis loss density = ch * (|Bx^a * dBx/dt^b| + |By^a * dBy/dt^b|
 
 where a=b=1 by default, if not given in
 this.material_properties.steinmetz_exponents = 1x2 vector
 
-peddy = eddy loss density = ce * ( (dBx/dt)^2 + (dBy/dt)^2 )
+p_eddy = eddy loss density = ce * ( (dBx/dt)^2 + (dBy/dt)^2 )
+
+p_excess = all-zero.
+
+WARNING: For now, the method also supports a legacy syntax, with the
+input arguments (this, timestamps, Bx, By). This syntax is used by the
+[time_domain_Steinmetz](time_domain_Steinmetz.html) function. In this case, the returned loss densities are in
+W/kg.
+
+### * loss_density Iron/material loss density method.
+
+[p_hysteresis, p_eddy, p_excess] = loss_density(this, Bdata), where
+
+* Bdata : flux density waveform data returned by |get_B_data|.
+
+Return values:
+
+* Elementwise hysteresis, eddy, and exces loss densities,
+expressed in W/m^3.
+Help for Material/loss_density is inherited from superclass MATERIALBASE
 
 ### * plot_BH Plot BH curves etc.
 

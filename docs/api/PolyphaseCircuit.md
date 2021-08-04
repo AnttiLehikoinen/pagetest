@@ -13,7 +13,7 @@ Returns a new PolyphaseCircuit object with the given name
 and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
 specification.
 
-A PolyphaseCircuit is largely characterized by its `winding_spec`
+A PolyphaseCircuit is largely characterized by its |winding_spec|
 property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
@@ -41,7 +41,7 @@ Returns a new **PolyphaseCircuit** object with the given name
 and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
 specification.
 
-A **PolyphaseCircuit** is largely characterized by its `winding_spec`
+A **PolyphaseCircuit** is largely characterized by its |winding_spec|
 property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
@@ -90,6 +90,9 @@ problem.
 [Scc, Mcc] = get_cc_blocks(this, problem, type)
 
 ### * get_loop_matrix Loop matrix associated with the circuit.
+
+### * PolyphaseCircuit/get_lt_matrix is a function.
+Scc = get_lt_matrix(this, problem, type, t, kstep, Xprev)
 
 ### * get_ndof Number of dofs associated with the circuit, for the given
 problem and type.
@@ -273,7 +276,7 @@ U = terminal_bemf(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
-U = time-derivative of `this.terminal_flux_linkage` return
+U = time-derivative of |this.terminal_flux_linkage| return
 value.
 
 ### * terminal_current Terminal current from solution.

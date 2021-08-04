@@ -21,6 +21,9 @@ necessity - the Research Group of Electromechanics was (and still is) working on
 
 # Who is EMDtool for?
 
+Coming soon
+{: .label .label-yellow }
+
 # Requirements
 
 The main system requirements are listed below:
@@ -60,3 +63,6 @@ Features under development; working but not pretty:
 	* SVPWM and SHE at the moment
 
 # Use cases
+
+Coming soon
+{: .label .label-yellow }

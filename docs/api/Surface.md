@@ -128,10 +128,10 @@ where Point_start and Point_end specify some boundary Line segment. The
 method modifies the boundary of this surface accordingly, and
 additionally returns the new boundary curves.
 
-**NOTE** The method works on *counterclockwise* oriented surfaces, so the
+*NOTE* The method works on _counterclockwise_ oriented surfaces, so the
 start and end points must be selected accordingly.
 
-**NOTE** This method must be called only after *all* boundary-sharing holes
+*NOTE* This method must be called only after _all_ boundary-sharing holes
 have been defined; the method cannot see the future.
 
 ### * reset_curves Remove all lines.

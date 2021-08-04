@@ -87,11 +87,11 @@ modelled.
 
 * number_of_meshed_conductors_per_layer As the name suggests.
 
-* number_of_slots - number of slots
-
 * p - number of pole-pairs
 
 * phases - number of phases
+
+* property_warning_given - set to true to disable warnings about default properties used
 
 * series_conductor_length_per_phase - series-conductor length per-phase
 
@@ -209,6 +209,9 @@ this.number_of_meshed_conductors_per_layer x this.number_of_slots
 solid-conductor models, typically equal to this.N_series for stranded
 models.
 
+### * property_modified Adds the modified property to the list of modified
+properties.
+
 ### * save_to_excel Export winding specs.
 
 save_to_excel(this, filename, varargin)
@@ -226,6 +229,9 @@ positive direction:
 * W(i, j) = -k : phase k goes through layer i, slot j, to
 negative direction:
 
+### * show_unset_properties Show warning about unset properties (default
+values).
+
 ### * PolyphaseWindingSpec/symmetry_period is a function.
 n = symmetry_period(this)
 
@@ -236,7 +242,7 @@ L = total_phase_quantity_matrix(this)
 
 a = winding_angle(this)
 
-Compute the stator *winding angle* i.e. rotation angle for the
+Compute the stator _winding angle_ i.e. rotation angle for the
 direct-quadrature space vector transformation (*without* considering the
 rotor bias angle) so that injecting d-axis current into the stator winding
 generates a cosinusoidal airgap flux

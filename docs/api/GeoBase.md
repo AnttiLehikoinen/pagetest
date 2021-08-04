@@ -15,7 +15,7 @@ Basic usage:
 * Optionally, add some <CircuitBase.html Circuits> with
 |this.add_circuit|
 
-* Call `this.mesh_geometry` to mesh the elementary geometry and
+* Call |this.mesh_geometry| to mesh the elementary geometry and
 replicate accordingly.
 
 Note that his is an abstract base class and cannot be instantiated.
@@ -162,18 +162,18 @@ with _name_.
 
 mesh_elementary_geometry(this)
 
-Meshes the *elementary* geometry, e.g. the raw geometry before possible
+Meshes the _elementary_ geometry, e.g. the raw geometry before possible
 replication.
 
 Note that the methods |this.shift_elementary_nodes|,
-`this.copy_domain|, and |this.parse_nodes` have to be implemented.
+|this.copy_domain|, and |this.parse_nodes| have to be implemented.
 
 ### * GeoBase/mesh_elementary_geometry_3D is a function.
 mesh_elementary_geometry_3D(this, varargin)
 
 ### * mesh_geometry Mesh geometry.
 
-Equivalent to calling `this.mesh_elementary_geometry` and
+Equivalent to calling |this.mesh_elementary_geometry| and
 |this.replicate_elementary_mesh|
 
 ### * parse_nodes Parse special nodes.
@@ -195,13 +195,13 @@ Equivalent to calling msh_plot(this, varargin{:})
 
 [] = plot_geometry(this, varargin)
 
-Plots the geometry using *plot* with _varargin_{:}
+Plots the geometry using _plot_ with _varargin_{:}
 
 ### * replicate_elementary_mesh Replicate elementary mesh.
 
 replicate_elementary_mesh(this, sector_shift, Nrep)
 
-Replicates the elementary geometry *Nrep* times. This is performed by
+Replicates the elementary geometry _Nrep_ times. This is performed by
 
 * applying the sector_shift to this.p, using this.shift_elementary_nodes
 

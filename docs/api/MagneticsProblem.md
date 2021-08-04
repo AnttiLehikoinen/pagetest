@@ -8,7 +8,7 @@ MagneticsProblem Class for solving magnetics problems.
 
 this = MagneticsProblem( model )
 
-Construct problem, where *model* is an instance of RFmodel or
+Construct problem, where _model_ is an instance of RFmodel or
 MotorModelBase class.
 
 Main methods:
@@ -25,7 +25,7 @@ Class methods are listed below. Inherited methods are not included.
 
 this = MagneticsProblem( model )
 
-Construct problem, where *model* is an instance of RFmodel or
+Construct problem, where _model_ is an instance of RFmodel or
 MotorModelBase class.
 
 Main methods:
@@ -60,7 +60,7 @@ imaginary/sinusoid component of the solution, compared to the
 real/cosinusoid part. This provides an approximation of the effect of
 rotor saliency.
 
-NOTE: The real and imaginary fields **are** coupled in the rotor, which is
+NOTE: The real and imaginary fields *are* coupled in the rotor, which is
 incorrect for synchronous machines (as f_rotor = 0). As a result, the rotor
 reluctivity gets overestimated. This may be fixed in a future release. In
 the meantime, see MagneticsProblen.solve_quasistatic.

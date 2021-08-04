@@ -35,7 +35,7 @@ center.
 * Index of shape function. As nodal shape functions are each
 associated with a mesh node, there are 3 shape functions that are
 non-zero over a first-order element. Example: for the element _e_,
-the shape function *k* is associated the node mesh.t(k, e).
+the shape function _k_ is associated the node mesh.t(k, e).
 ## PROPERTIES
 * op - operator
 
@@ -59,9 +59,9 @@ vals = eval(this, k, x_local, mesh, elements)
 
 Evaluates (this.op x N_k), where N_k is the k:th node of
 the elementType of the given mesh. The expression is
-evaluated at the *global* coordinates
-corresponding to the given *local* coordinates, on the
-specified *elements* of the given _mesh_.
+evaluated at the _global_ coordinates
+corresponding to the given _local_ coordinates, on the
+specified _elements_ of the given _mesh_.
 
 Input arguments:
 
