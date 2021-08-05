@@ -8,7 +8,7 @@ GeoBase Base class for geometries.
 
 Basic usage:
 
-* Add some <Domain.html Domains> with `this.add_domain`
+* Add some [Domain](Domain.html)s with `this.add_domain`
 
 * Add the <Material.html required Materials> with `this.add_material`
 
