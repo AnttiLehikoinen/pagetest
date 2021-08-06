@@ -1,12 +1,10 @@
 ---
 layout: default
-title: Getting started
-nav_order: 2
+title: syntax testing
+nav_order: 3
 parent: Documentation
 math: mathjax2
 ---
-Coming soon
-{: .label .label-yellow }
 
 **Just some syntax testing here for now**
 

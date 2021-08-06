@@ -14,6 +14,12 @@ Finally, the [industrial licenses](pricing.html) of EMDtool are largely [source-
 makes EMDtool the **ideal choice for medium-sized enterprises** that would greatly benefit from a custom-inhouse software toolkit, but don't have the resources to dedicate an entire team (or department) to building and 
 maintaining one.
 
+Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html).
+
+# How does EMDtool work?
+
+Please check the [getting started guide](documentation/getting_started.html) and the [`EMDtool` overview](documentation/emdtool_briefly.html) to get a quick first impression.
+
 # History
 
 EMDtool is loosely based on the open-source [SMEKlib library](https://github.com/AnttiLehikoinen/SMEKlib) developed at Aalto University, Finland, between 2013 and 2018 or so. This library was initially built out of

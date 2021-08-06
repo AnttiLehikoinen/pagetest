@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API
-nav_order: 3
+nav_order: 2
 parent: Documentation
 has_children: true
 has_toc : false
