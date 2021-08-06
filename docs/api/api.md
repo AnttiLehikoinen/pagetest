@@ -93,7 +93,7 @@ has_toc : false
 
 * *class* : [Problems/Magnetics/MagneticsProblem](MagneticsProblem.html)  **MagneticsProblem** Class for solving magnetics problems.
 * *class* : [HarmonicSolution](HarmonicSolution.html) **HarmonicSolution** is a class.
-* *class* : [MagneticsSolution](MagneticsSolution.html)  **MagneticsSolution** Class for representing solution to MagneticsProblem.
+* *class* : [MagneticsSolution](MagneticsSolution.html)  **MagneticsSolution** Class for representing the solution to MagneticsProblem.
 * *class* : [SimulationParameters](SimulationParameters.html)  **SimulationParameters** Parameters for MagneticsProblem solutions.
 * *class* : [StaticSolution](StaticSolution.html) **StaticSolution** is a class.
 * *class* : [SteppingSolution](SteppingSolution.html) **SteppingSolution** is a class.
@@ -122,7 +122,8 @@ has_toc : false
 * *class* : [SynRotorBase](SynRotorBase.html)  **SynRotorBase** Base class for synchronous machine rotors.
 * *class* : [/Slots/CooledSlot1](CooledSlot1.html) **CooledSlot1** methods:
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
-* *class* : [/Slots/SlotShapeBase](SlotShapeBase.html) **SlotShapeBase** methods:
+* *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
+* *class* : [SlotShapeWrapper](SlotShapeWrapper.html) **SlotShapeWrapper** is a class.
 * *class* : [/Stators/FormWound1](FormWound1.html) **FormWound1** methods:
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:
 * *class* : [/Stators/OutrunnerFrame](OutrunnerFrame.html) **OutrunnerFrame** methods:

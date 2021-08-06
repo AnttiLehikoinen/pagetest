@@ -200,7 +200,8 @@ iron_loss_density_time_domain_Steinmetz(this, Bdata), where
 
 The loss components are computed as follows:
 
-p_hysteresis = hysteresis loss density = ch ** (|Bx^a **  dBx/dt^b| + `By^a * dBy/dt^b`
+p_hysteresis = hysteresis loss density = ch ** abs(Bx^a **  dBx/dt^b) +
+abs(By^a * dBy/dt^b)
 
 where a=b=1 by default, if not given in
 this.material_properties.steinmetz_exponents = 1x2 vector

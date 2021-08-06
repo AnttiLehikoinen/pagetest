@@ -72,3 +72,29 @@ Features under development; working but not pretty:
 
 Coming soon
 {: .label .label-yellow }
+
+# Frequently-asked questions
+
+For questions on the toolbox itself, please first refer to the [documentation](documentation/documentation.html). Other common questions are listed below.
+
+### Is there support?
+
+Yes. Time for honesty here - only a small number of `EMDtool` licenses have been sold so far. That means quite personalized support.
+
+### Can <Feature X> be added?
+
+Most likely yes. If it's something small, that's [on the house](https://www.smeklab.com).
+
+Something bigger would then call for a joint development project. Normally, that would work as a consulting-style arrangement, at break-even price, with the new functionality added to the future `EMDtool`
+releases (apart from possible minor confidential parts such as custom geometry templates).
+
+### Does EMDtool work with Octave/Scilab?
+
+No, unfortunately. Octave does claim compatibility with Matlab, but this claim does not seem to be correct. For instance, object arrays are not supported.
+
+### Is there a Python version?
+
+That'd again be a no. A Python implementation would be lovely, but porting the existing codebase would be quite a formidable task. 
+
+Futhermore, Matlab's JIT (just-in-time) compiler is pretty much the best on market, resulting in very fast execution. Python does have `Numba`, which unfortunately only works on rather elementary operations.
+By contrast, a huge majority of the lines-of-code in `EMDtool` cannot be easily translated to low-lever format.
