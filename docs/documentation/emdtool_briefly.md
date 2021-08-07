@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EMDtool briefly
+nav_order: 2
 parent: Documentation
 ---
 
