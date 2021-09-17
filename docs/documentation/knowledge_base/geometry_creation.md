@@ -54,3 +54,28 @@ Like implied above, you can create geometry template class by subclassing the [G
 [SynRotorBase](../../api/SynRotorBase.html). This is because many of the finer analysis features require some other methods from the templates. An example is the `.d_axis_angle` for rotor templates, to
 allow automatic dq-transformations.
 
+Most likely, you will implement the `.create_geometry` method in its own separate file. Inside the file, you will generally do the following 
+steps:
+
+1. Create the `Material`s used in the model, and add them to the component.
+
+1. Create the `Domain`s used and add them to the component.
+
+1. Create the `Circuit`s used, and add them to the component.
+
+Now, let's take a brief look at each of these steps.
+
+## Creating materials
+
+Materials are objects, and subclasses of the `MaterialBase` class. Most importantly, they contain the functionality required for modelling
+the (generally non-linear) B-H relationship of the material in question.
+
+The majority of the time, your materials will be of the simple anisotropic, non-hysteretic `Material` class, and created using one of the 
+following methods:
+
+* Using the `Material.create(0)` method to use one of the early `EMDtool` built-in materials. In the example before, the index 0 would
+be for air, folks
+
+* Using the `PMlibrary.create` or `SteelLibrary.create` methods, to gain access to more, newer, and more regularly-updated materials.
+
+* Use your own materials, most often wrapped inside a function calling the `Material.from_specs` method.

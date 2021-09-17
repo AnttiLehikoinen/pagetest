@@ -22,7 +22,7 @@ is a rather general-purpose template of a slotted stator. And, the [SPM1](../api
 array magnets, segmented magnets, arced or regular magnet faces, and so forth.
 
 In other words, there's no beating a good template in terms of ease of use, or code reusability for that matter. `EMDtool` already offers a quite decent selection of templates, and creating your own
-is not such a formidable task once you get the hang of it ([please see here](/knowledge_base/geometry_creation) and follow the breadcrumbs to get started). 
+is not such a formidable task once you get the hang of it ([please see here](../knowledge_base/geometry_creation) and follow the breadcrumbs to get started). 
 Besides, the initial investment of time here quickly pays itself back.
 
 Anyways, creating a templated model is simple. You simply create a [`struct`](https://www.mathworks.com/help/matlab/ref/struct.html), and assign into it (as `fields`) the parameters and dimensions required. These typically include
