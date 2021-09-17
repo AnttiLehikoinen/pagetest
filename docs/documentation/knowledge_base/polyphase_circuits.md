@@ -18,3 +18,16 @@ it makes sense.
 ## Winding specification
 
 Why own dq? 6-phase system, either true (5-6 dof) or 2x3 with separate star points (2-dof)
+
+# Stuff
+
+How derivatives are computed
+
+Loop matrix
+
+L_ij = +N, loop current j goes through conductor i, N times, to the positive direction
+
+
+L_ij = -N, loop current j goes through conductor i, N times, to the negative direction
+
+0 = otherwise
