@@ -80,6 +80,7 @@ be for air, folks
 
 * Use your own materials, most often wrapped inside a function calling the `Material.from_specs` method.
 
+
 After creation, the material objects are added to your component with `this.add_material( material_object )`. Here `this` of
 course refers to your template object, like `this` in Java or `self` in Python). For some reason, the Matlab documentation uses `obj` 
 instead.
@@ -131,3 +132,8 @@ appropriate.
 
 Back to the example: after creating the circuit, we create a `SolidConductor` object to wrap the `Core` `Domain` created earlier. Then,
 this conductor is added to the circuit, and the circuit is added to the geometry template itself.
+
+
+# Case Example: Solid Rotor for a High-Speed Induction Motor
+
+
