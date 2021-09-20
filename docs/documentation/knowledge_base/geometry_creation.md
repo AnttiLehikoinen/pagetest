@@ -65,7 +65,7 @@ steps:
 
 Now, let's take a brief look at each of these steps.
 
-## Creating materials
+## Creating Materials
 
 Materials are objects, and subclasses of the `MaterialBase` class. Most importantly, they contain the functionality required for modelling
 the (generally non-linear) B-H relationship of the material in question.
@@ -79,3 +79,55 @@ be for air, folks
 * Using the `PMlibrary.create` or `SteelLibrary.create` methods, to gain access to more, newer, and more regularly-updated materials.
 
 * Use your own materials, most often wrapped inside a function calling the `Material.from_specs` method.
+
+After creation, the material objects are added to your component with `this.add_material( material_object )`. Here `this` of
+course refers to your template object, like `this` in Java or `self` in Python). For some reason, the Matlab documentation uses `obj` 
+instead.
+
+## Creating Domains
+
+Domains are also objects, each consisting of a single material (at least for the foreseeable future), and representing one interesting part
+of the geometry. For instance, one bar of an induction motor would normally by a `Domain`, as would the part of the stator core within one slot
+pitch.
+
+Domains themselves are very easy to define. However, for them to actually mean anything, you will have to add one or more `Surfaces` to each
+of them, to tell `EMDtool` something about the actual geometry. We will take a closer look on this later.
+
+For now, the code snippet below demonstrates the usage of `Domains` in a simple form.
+
+```matlab
+Core = Domain('Rotor_core', core_material);
+Core.add_surface(core_surface);
+this.add_domain(Core);
+```
+
+## Creating Circuits
+
+Although optional, `Circuits` do feature as a part of most geometry templates. After all, motors typically have windings where currents
+should flow, and other conductive bodies where they should not but still do (eddy currents).
+
+An example tells more than a thousand words, so here is one:
+
+````matlab
+core_circuit = SheetCircuit('Rotor_core');
+core_conductor = SolidConductor(Core);
+core_circuit.add_conductor(core_conductor);
+this.add_circuit(core_circuit);
+```
+
+In this example, we are presumably dealing with a high-speed induction motor with a solid core. To model the eddy-currents induced
+into the core, we have to create a `CircuitBase` object for it.
+
+Specifically, we will create a `SheetCircuit` object. A sheet circuit is a special kind of circuit, reserved for solid bodies that
+span the entire circumference of a motor. Think a cylindrical copper shell (a sheet) used as an eddy current shield, a solid shaft, a
+solid frame, or indeed a solid core.
+
+**Note:** Were we modelling the entire cross section of the machine, there would be nothing special about a sheet circuit. However,
+the assumption in `EMDtool` is that we are only modelling one symmetry sector. Say we have a conducting body in the symmetry sector, and
+by extension a similar body in all the other (non-modelled) sectors. In reality, the sector-bodies may form a single continuous body
+(like a shaft or our rotor core in the example), or they may be separate from each other (like a PM segment inside an IPM rotor). The
+former case would call for a `SheetCircuit`, whereas for the latter a `BlockCircuit` or perhaps an `ExtrudedBlockCircuit` would be more
+appropriate.
+
+Back to the example: after creating the circuit, we create a `SolidConductor` object to wrap the `Core` `Domain` created earlier. Then,
+this conductor is added to the circuit, and the circuit is added to the geometry template itself.
