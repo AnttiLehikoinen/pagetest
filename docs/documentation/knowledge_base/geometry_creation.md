@@ -97,9 +97,9 @@ of them, to tell `EMDtool` something about the actual geometry. We will take a c
 For now, the code snippet below demonstrates the usage of `Domains` in a simple form.
 
 ```matlab
-Core = Domain('Rotor_core', core_material);
-Core.add_surface(core_surface);
-this.add_domain(Core);
+core_domain = Domain('Rotor_core', core_material);
+core_domain.add_surface(core_surface);
+this.add_domain(core_domain);
 ```
 
 ## Creating Circuits
@@ -111,7 +111,7 @@ An example tells more than a thousand words, so here is one:
 
 ````matlab
 core_circuit = SheetCircuit('Rotor_core');
-core_conductor = SolidConductor(Core);
+core_conductor = SolidConductor(core_domain);
 core_circuit.add_conductor(core_conductor);
 this.add_circuit(core_circuit);
 ```
@@ -136,4 +136,54 @@ this conductor is added to the circuit, and the circuit is added to the geometry
 
 # Case Example: Solid Rotor for a High-Speed Induction Motor
 
+Next, let's take a look at a very simple yet complete-ish template example. The template in question is for a very simple high-speed 
+induction motor rotor: no slits, no coats, no shaft.
 
+The template is located inside a folder called `@SimpleSolidRotor`, with the @-sign telling Matlab that a folder defines a class.
+
+Inside the folder, the first file is the main class definition file `SimpleSolidRotor.m`. Its entire contents are listed below:
+
+```matlab
+classdef SimpleSolidRotor < SynRotorBase
+    methods
+        create_geometry(this)
+    end
+end
+```
+
+So, the class inherits the `SynRotorBase` class. Even though not _synchronous_, inheriting this class saves us some trouble of implementing
+some other functionality needed (see the `RadialGeometry` class for a list).
+
+Furthermore, the class file tells Matlab that the main geometry creation function `create_geometry` in inside a different file. Let's
+take a look at it next.
+
+The first few lines of the `create_geometry.m` file read
+
+```matlab
+dim = this.dimensions;
+Rout = dim.Rout; %outer radius
+angle_pole = pi / dim.p; %pole angle
+lcar_ag = Airgap.characteristic_length(this);
+lcar_center = Rout/5;
+```
+
+What happens here is that we extract the dimensions `structure` given as input to the class constructor, and then save the radius of 
+the rotor along with its pole pitch (in radians) to internal variables `Rout` and `angle_pole`.
+
+Finally, we compute some _characteristic lengths_ to control the mesh density on the airgap surface and the rotor center, respectively.
+
+Next, we repeat the steps we already saw earlier, initializing the Materials, Domains, and Circuits needed for the model.
+
+```matlab
+core_material = Material.create( dim.rotor_core_material );
+this.add_material(core_material);
+
+core_domain = Domain('Rotor_core', core_material);
+this.add_domain(core_domain);
+
+core_circuit = SheetCircuit('Rotor_core');
+core_conductor = SolidConductor(core_domain);
+core_circuit.add_conductor(core_conductor);
+this.add_circuit(core_circuit);
+```
+Next, we repeat the steps we already saw earlier, initializing the Materials, Domains, and Circuits needed for the model.
