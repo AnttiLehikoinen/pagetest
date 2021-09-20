@@ -79,3 +79,6 @@ be for air, folks
 * Using the `PMlibrary.create` or `SteelLibrary.create` methods, to gain access to more, newer, and more regularly-updated materials.
 
 * Use your own materials, most often wrapped inside a function calling the `Material.from_specs` method.
+
+
+# Case Example: Solid Rotor for a High-Speed Induction Motor
