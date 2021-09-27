@@ -264,7 +264,7 @@ For clarity, the figure below shows the three points above, as well as the core 
 ![](geo_rotor_simple.png)
 
 **Note:_** As you can read in the documentation, [`Arcs`](../../api/Arc.html) have to be strictly less than 180 degrees in span. Thus, the above example will fail for two-pole machines. For robustness,
-we should use an extra third point `Pout_ccw = Pout_cw.rotate(angle_pole/2);` on the airgap surface, with corresponding two airgap Arcs.
+we should use an extra third point `Pmid_ccw = Pout_cw.rotate(angle_pole/2);` on the airgap surface, with corresponding two airgap Arcs.
 
 Finally, we will have specify that the clockwise and counter-clockwise boundaries are _periodic_ - to allow for correct mesh replication and finally correct boundary conditions in the final model.
 
