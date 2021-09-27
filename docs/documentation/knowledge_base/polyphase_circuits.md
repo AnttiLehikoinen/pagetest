@@ -15,6 +15,8 @@ it makes sense.
 
 # Circuits
 
+* Own page for Circuits (Block, Sheet, Polyphase, Extruded) --> then direct to PolyPhaseCircuit
+
 ## Winding specification
 
 Why own dq? 6-phase system, either true (5-6 dof) or 2x3 with separate star points (2-dof)
