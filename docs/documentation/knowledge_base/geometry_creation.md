@@ -53,7 +53,8 @@ Before diving deeper into geometry templates, let's repeat one important detail:
 After all, most electrical machines are like that. Each rotor pole is often identical to the others, as is each stator slot. Please note that we are only speaking about the _geometry_ here - of course each
 slot will typically host different coil sides, and each pole will be magnetized in a different direction. Yet, the geometry - the shapes of everything - will be just repeated.
 
-The great-parent component classes - often [`RadialGeometry``](../../api/RadialGeometry.html) (in turn a subclass of [`GeoBase`](../../api/GeoBase.html)) are built with precisely this in mind. Indeed, it
+The great-parent component classes - often a [`RadialGeometry`](../../api/RadialGeometry.html) (in turn a subclass of [`GeoBase`](../../api/GeoBase.html)) are 
+built with precisely this in mind. Indeed, it
 is assumed that the `.create_geometry` method of any subclass only creates the geometry for one slot or pole pitch. The boring parts, such as
 
 * meshing the slot or pole pitch
@@ -64,7 +65,7 @@ is assumed that the `.create_geometry` method of any subclass only creates the g
 
 * assigning the correct materials and boundary conditions to the replicated parts
 
-* assigning the replicated parts to the correct circuits`
+* assigning the replicated parts to the correct circuits
 
 * updating permanent magnet or material orientation
 
