@@ -40,6 +40,8 @@ intermediate results look like.
 * Verify that you have added all of your Domains and Materials to your
 Geometry, and all Surfaces to their corresponding Domains.
 
+* At the moment, the built-in geometry creation does not allow empty (non-meshed) holes. Relatedly, all geometric Surfaces have to be associated with a domain.
+
 * In the extreme case, try restarting your Matlab. Matlab occasionally
 locks the files .geo file; restarting Matlab solves this issue.
 
