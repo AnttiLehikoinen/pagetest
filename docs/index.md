@@ -81,7 +81,7 @@ For questions on the toolbox itself, please first refer to the [documentation](d
 
 Yes. Time for honesty here - only a small number of `EMDtool` licenses have been sold so far. That means quite personalized support.
 
-### Can <Feature X> be added?
+### Can **Feature X** be added?
 
 Most likely yes. If it's something small, that's [on the house](https://www.smeklab.com).
 
