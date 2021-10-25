@@ -45,6 +45,25 @@ Geometry, and all Surfaces to their corresponding Domains.
 * In the extreme case, try restarting your Matlab. Matlab occasionally
 locks the files .geo file; restarting Matlab solves this issue.
 
+# Miscellaneous pitfalls
+
+* When adding `Materials` to a geometry template, please use the following syntax:
+```matlab
+material_object = Material.create( material_name_or_index_or_object );
+this.add_material(material_object);
+```
+This is to ensure the same material object does not accumulate ghost domains from earlier, non-existing geometries. This could happen with the following syntax:
+´´´matlab
+material_object = PMlibrary.create('N35');
+...
+custom_template_1.add_material(material_object);
+custom_template_2.add_material(material_object);
+´´´
+In this case, the `material_object´ would share domains from both `custom_template_1` and `custom_template_2`, resulting in errors at best; incorrect but non-erroneous behaviour at worst. This will
+raise a warning in future versions of EMDtool.
+
+
+
 # Why are my simulation results weird?
 
 * Check the 'Meshing fails' steps first.
